@@ -921,17 +921,110 @@ button {
 /* === Responsive === */
 @media (max-width: 480px) {
   .shell { padding: 16px 12px 32px; }
-  .header { padding: 12px 14px; }
+  .main-content { padding-left: 12px; padding-right: 12px; }
+
+  /* Header: 48px compact */
+  .header { height: 48px; padding: 0 12px; gap: 8px; }
+  .header__logo { width: 28px; height: 28px; font-size: 0.9rem; border-radius: 8px; }
+  .header__title { font-size: 0.85rem; }
+  .header__subtitle { display: none; }
+  .header__employee-pill { font-size: 0.65rem; padding: 3px 8px; }
+  .header__online-dot { width: 5px; height: 5px; }
+  .icon-toggle { width: 26px; height: 26px; font-size: 0.78rem; }
+  .icon-toggle--lang { font-size: 0.65rem; }
+
+  /* Month nav tighter */
+  .month-nav { gap: 2px; }
+  .month-nav__label { min-width: 78px; font-size: 0.72rem; }
+  .month-nav .btn--icon { width: 26px; height: 26px; min-height: 26px; padding: 0; font-size: 0.85rem; }
+
+  /* Bottom nav: 56px */
+  .bottom-nav { height: 56px; }
+  .bottom-nav__icon { font-size: 1.1rem; }
+  .bottom-nav__label { font-size: 0.58rem; }
+  .bottom-nav__item { padding: 6px 8px; gap: 2px; }
+  .bottom-nav__item.active::after { top: 4px; }
+  .main-content {
+    padding-bottom: calc(70px + env(safe-area-inset-bottom));
+  }
+
+  /* View toggle */
+  .view-toggle { padding: 3px; gap: 3px; margin-bottom: 14px; }
+  .view-toggle__btn {
+    font-size: 0.72rem;
+    padding: 10px 6px;
+    min-height: 44px;
+  }
+
+  /* Tabs (legacy, harmless if unused) */
   .tabs-wrapper { padding: 8px 12px 0; }
   .tab { padding: 8px 12px; font-size: 0.78rem; }
-  .hero { gap: 16px; }
-  .ring-wrap { width: 140px; height: 140px; }
-  .ring-text__pct { font-size: 1.6rem; }
-  .input, .btn { min-height: 48px; }
+
+  /* Hero card stacks naturally; reduce ring + KPIs */
+  .hero { gap: 14px; padding: 16px; min-height: auto; }
+  .ring-wrap { width: 120px; height: 120px; }
+  .ring-text__pct { font-size: 1.4rem; }
+  .ring-text__label { font-size: 0.62rem; }
+  .hero__title { font-size: 1rem; margin-bottom: 12px; }
+  .hero__eyebrow { font-size: 0.65rem; }
+  .kpi { padding: 8px 10px; }
+  .kpi__label { font-size: 0.62rem; }
+  .kpi__value { font-size: 1rem; }
+
+  /* Products grid: 1 column on small phones */
+  .products-grid { grid-template-columns: 1fr; gap: 10px; }
+  .product-card { padding: 14px; }
+
+  /* Touch-friendly inputs + buttons */
+  .input { min-height: 44px; font-size: 16px; }
+  .btn { min-height: 44px; }
+  .btn--block { padding: 12px; }
+
+  /* Form spacing */
+  .field { margin-bottom: 14px; }
+  .field__label { font-size: 0.82rem; }
+  .field__unit { font-size: 0.65rem; }
+
+  /* Chart cards */
+  .chart-card { padding: 16px; }
+  .chart-card__title { font-size: 0.88rem; margin-bottom: 12px; }
+
+  /* Settings rows */
+  .product-row {
+    grid-template-columns: auto 1fr auto auto;
+    padding: 8px 10px;
+  }
+  .product-row__dot { display: none; }
+  .product-row__weight-input { width: 56px; padding: 4px 6px; font-size: 0.78rem; min-height: 36px; }
+  .product-row__del { width: 28px; height: 28px; font-size: 0.9rem; }
+
+  /* Settings preset grids */
   .preset-grid--emoji { grid-template-columns: repeat(7, 1fr); }
   .preset-grid--color { grid-template-columns: repeat(6, 1fr); }
   .form-grid { grid-template-columns: 1fr; }
-  .ytd-kpis { grid-template-columns: 1fr 1fr; }
-  .daily-table { font-size: 0.72rem; }
-  .daily-table th, .daily-table td { padding: 6px 4px; }
+
+  /* YTD product table */
+  .ytd-product-table { font-size: 0.72rem; }
+  .ytd-product-table th, .ytd-product-table td { padding: 6px 4px; }
+
+  /* Daily history table */
+  .daily-table { font-size: 0.7rem; }
+  .daily-table th, .daily-table td { padding: 5px 3px; }
+  .daily-edit-input { width: 48px; padding: 3px 4px; min-height: 30px; font-size: 0.72rem; }
+
+  /* Toast */
+  .toast { font-size: 0.82rem; padding: 10px 18px; }
+
+  /* Modal */
+  .modal { padding: 24px 20px; }
+  .modal__emoji { font-size: 2.2rem; }
+  .modal__title { font-size: 1.15rem; }
+  .modal__subtitle { font-size: 0.78rem; }
+}
+
+/* Very narrow phones (≤ 360px): KPIs become 1 column */
+@media (max-width: 360px) {
+  .kpis { grid-template-columns: 1fr; }
+  .header__title { font-size: 0.78rem; }
+  .month-nav__label { min-width: 64px; font-size: 0.68rem; }
 }

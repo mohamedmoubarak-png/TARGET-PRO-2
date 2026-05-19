@@ -54,7 +54,7 @@ export function YTDView({ ytd, currentMonth }: Props) {
         />
         <div className="hero__body">
           <p className="hero__eyebrow">{t.ytd_title.replace(/^📅\s*/, "")}</p>
-          <h2 className="hero__title">📊 {t.ytd_chart_title.replace(/^📊\s*/, "")}</h2>
+          <h2 className="hero__title">📈 {t.ytd_kpi_avg}: {ytd.avgScore.toFixed(1)}</h2>
           <div className="kpis">
             <div className="kpi">
               <div className="kpi__label">{t.ytd_kpi_avg}</div>
@@ -65,13 +65,13 @@ export function YTDView({ ytd, currentMonth }: Props) {
             <div className="kpi">
               <div className="kpi__label">{t.ytd_kpi_best}</div>
               <div className="kpi__value" style={{ color: "var(--success)" }}>
-                {ytd.bestMonth ? `${ytd.bestMonth.label} ${ytd.bestMonth.score.toFixed(0)}` : "—"}
+                {ytd.bestMonth ? `${ytd.bestMonth.label} (${ytd.bestMonth.score.toFixed(0)})` : "—"}
               </div>
             </div>
             <div className="kpi">
               <div className="kpi__label">{t.ytd_kpi_worst}</div>
               <div className="kpi__value" style={{ color: "var(--danger)" }}>
-                {ytd.worstMonth ? `${ytd.worstMonth.label} ${ytd.worstMonth.score.toFixed(0)}` : "—"}
+                {ytd.worstMonth ? `${ytd.worstMonth.label} (${ytd.worstMonth.score.toFixed(0)})` : "—"}
               </div>
             </div>
             <div className="kpi">
@@ -84,9 +84,8 @@ export function YTDView({ ytd, currentMonth }: Props) {
         </div>
       </div>
 
-      {/* YTD Chart */}
+      {/* YTD Chart — no title (already shown above in hero) */}
       <div className="card chart-card">
-        <h3 className="chart-card__title">{t.ytd_chart_title}</h3>
         <ResponsiveContainer width="100%" height={220}>
           <BarChart data={ytd.months} margin={{ top: 8, right: 8, left: -24, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(127,127,140,0.18)" />
