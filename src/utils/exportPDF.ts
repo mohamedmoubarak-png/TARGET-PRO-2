@@ -97,7 +97,7 @@ function buildReportHTML(p: ExportParams): string {
   return `
     <div style="font-family:'Cairo',sans-serif;direction:${dir};color:#e8edf8;background:#060d1a;padding:48px">
       <div style="display:flex;align-items:center;gap:16px;margin-bottom:32px;padding-bottom:16px;border-bottom:2px solid rgba(212,168,67,0.3)">
-        <div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#D4A843,#f0c857);display:flex;align-items:center;justify-content:center;font-size:1.8rem">📊</div>
+        <div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#D4A843,#f0c857);display:flex;align-items:center;justify-content:center;font-size:1.8rem">🎯</div>
         <div style="flex:1">
           <div style="font-size:1.4rem;font-weight:900;color:#D4A843">${t.brand_title}</div>
           <div style="font-size:0.85rem;color:rgba(255,255,255,0.5)">${t.pdf_report_title}</div>

@@ -20,7 +20,7 @@ export function WelcomeModal({ onSave }: Props) {
   return (
     <div className="modal-backdrop">
       <div className="modal">
-        <div className="modal__emoji">📊</div>
+        <div className="modal__emoji">🎯</div>
         <h2 className="modal__title">{t.welcome_title}</h2>
         <p className="modal__subtitle">{t.welcome_subtitle}</p>
         <input

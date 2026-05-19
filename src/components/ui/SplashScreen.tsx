@@ -8,7 +8,7 @@ export function SplashScreen({ hiding }: Props) {
   const t = useT();
   return (
     <div className={`splash ${hiding ? "splash--hide" : ""}`}>
-      <div className="splash__logo">📊</div>
+      <div className="splash__logo">🎯</div>
       <h1 className="splash__title">{t.brand_title}</h1>
       <p className="splash__subtitle">{t.splash_subtitle}</p>
       <div className="splash__dots">

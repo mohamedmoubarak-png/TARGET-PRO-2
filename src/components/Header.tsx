@@ -19,7 +19,7 @@ export function Header({ month, currentMonth, employeeName, jobTitle, onChangeMo
     <header className="header">
       <div className="header__inner">
         <div className="header__brand">
-          <div className="header__icon">📊</div>
+          <div className="header__icon">🎯</div>
           <div>
             <div className="header__title">{t.brand_title}</div>
             <div className="header__subtitle">{t.brand_subtitle}</div>

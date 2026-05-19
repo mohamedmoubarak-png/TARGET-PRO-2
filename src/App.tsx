@@ -152,7 +152,7 @@ export default function App() {
     return (
       <div className="app-container loading">
         <div>
-          <div className="loading__emoji">📊</div>
+          <div className="loading__emoji">🎯</div>
           <p className="loading__text">{t.loading_data}</p>
         </div>
       </div>
