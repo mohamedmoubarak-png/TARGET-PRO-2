@@ -13,7 +13,7 @@ import { useInstallPrompt } from "./hooks/useInstallPrompt";
 import { useTheme } from "./hooks/useTheme";
 import { useI18n } from "./i18n/I18nContext";
 import { Header } from "./components/Header";
-import { NavTabs } from "./components/NavTabs";
+import { BottomNav } from "./components/BottomNav";
 import { DashboardView } from "./components/dashboard/DashboardView";
 import { TargetsForm } from "./components/forms/TargetsForm";
 import { AchievementsForm } from "./components/forms/AchievementsForm";
@@ -170,12 +170,10 @@ export default function App() {
         month={month}
         currentMonth={NOW}
         employeeName={name}
-        jobTitle={jobTitle}
         onChangeMonth={changeMonth}
       />
-      <NavTabs active={tab} onChange={setTab} />
 
-      <main className="shell">
+      <main className="main-content">
         {tab === "dashboard" && (
           <DashboardView
             stats={stats}
@@ -223,6 +221,8 @@ export default function App() {
 
         <p className="footer">{t.footer_text}</p>
       </main>
+
+      <BottomNav active={tab} onChange={setTab} />
 
       {canInstall && <InstallBanner onInstall={install} onDismiss={dismiss} />}
     </div>

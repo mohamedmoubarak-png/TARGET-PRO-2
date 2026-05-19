@@ -136,6 +136,37 @@ export interface TString {
   footer_text: string;
   developer_credit: string;
 
+  // Bottom nav (shorter labels than top tabs)
+  bn_dashboard: string;
+  bn_targets: string;
+  bn_achieved: string;
+  bn_settings: string;
+
+  // View toggle (Month vs YTD)
+  view_ytd: string;
+
+  // YTD view (dedicated mode, full screen)
+  ytd_hero_label: string;
+  ytd_kpi_avg: string;
+  ytd_kpi_best: string;
+  ytd_kpi_worst: string;
+  ytd_kpi_logged: string;
+  ytd_chart_title: string;
+  ytd_table_title: string;
+  ytd_tips_title: string;
+  ytd_empty: string;
+
+  ytd_tip_excellent_title: string;
+  ytd_tip_excellent: (avg: number) => string;
+  ytd_tip_good_title: string;
+  ytd_tip_good: (avg: number) => string;
+  ytd_tip_low_title: string;
+  ytd_tip_low: (avg: number) => string;
+  ytd_tip_best_title: string;
+  ytd_tip_best: (month: string, score: number) => string;
+  ytd_tip_worst_title: string;
+  ytd_tip_worst: (month: string, score: number) => string;
+
   months_full: string[];
   months_short: string[];
 
@@ -299,6 +330,34 @@ export const dict: Record<Lang, TString> = {
     footer_text: "Target Pro — البيانات محفوظة محلياً على جهازك | لا يوجد سيرفر أو تسجيل دخول",
     developer_credit: "تطوير: MOHAMED SAYED",
 
+    bn_dashboard: "الرئيسية",
+    bn_targets: "المستهدف",
+    bn_achieved: "الإنجاز",
+    bn_settings: "الإعدادات",
+
+    view_ytd: "📈 من بداية السنة",
+
+    ytd_hero_label: "متوسط الأداء / 100",
+    ytd_kpi_avg: "متوسط YTD",
+    ytd_kpi_best: "أفضل شهر",
+    ytd_kpi_worst: "أضعف شهر",
+    ytd_kpi_logged: "أشهر مسجّلة",
+    ytd_chart_title: "📊 الأداء الشهري عبر السنة",
+    ytd_table_title: "📋 تفصيل المنتجات سنوياً",
+    ytd_tips_title: "🧠 تحليل ذكي للسنة",
+    ytd_empty: "لا توجد بيانات مسجّلة هذا العام بعد",
+
+    ytd_tip_excellent_title: "أداء سنوي ممتاز!",
+    ytd_tip_excellent: (avg) => `أداء سنوي ممتاز! متوسطك ${avg.toFixed(1)} — أنت في قمة الأداء.`,
+    ytd_tip_good_title: "أداء جيد",
+    ytd_tip_good: (avg) => `أداء جيد لكن في مجال للتحسين. متوسطك ${avg.toFixed(1)}/100.`,
+    ytd_tip_low_title: "محتاج تطوير",
+    ytd_tip_low: (avg) => `متوسط أدائك السنوي ${avg.toFixed(1)} — ركّز على المنتجات الأضعف.`,
+    ytd_tip_best_title: "أفضل شهر",
+    ytd_tip_best: (m, s) => `أفضل شهر كان ${m} بدرجة ${s.toFixed(1)} — كرر نفس الأسلوب!`,
+    ytd_tip_worst_title: "شهر يحتاج مراجعة",
+    ytd_tip_worst: (m, s) => `شهر ${m} كان الأضعف (${s.toFixed(1)}) — راجع ما حصل لتتجنّبه.`,
+
     months_full: ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"],
     months_short: ["ينا","فبر","مار","أبر","ماي","يون","يول","أغس","سبت","أكت","نوف","ديس"],
 
@@ -460,6 +519,34 @@ export const dict: Record<Lang, TString> = {
 
     footer_text: "Target Pro — data stored locally on your device | no server, no login",
     developer_credit: "Developed by MOHAMED SAYED",
+
+    bn_dashboard: "Home",
+    bn_targets: "Targets",
+    bn_achieved: "Done",
+    bn_settings: "Settings",
+
+    view_ytd: "📈 Year to date",
+
+    ytd_hero_label: "Average score / 100",
+    ytd_kpi_avg: "YTD avg",
+    ytd_kpi_best: "Best month",
+    ytd_kpi_worst: "Worst month",
+    ytd_kpi_logged: "Months logged",
+    ytd_chart_title: "📊 Monthly performance across the year",
+    ytd_table_title: "📋 Yearly product breakdown",
+    ytd_tips_title: "🧠 Yearly insights",
+    ytd_empty: "No data logged this year yet",
+
+    ytd_tip_excellent_title: "Excellent yearly performance!",
+    ytd_tip_excellent: (avg) => `Excellent yearly performance! Your average is ${avg.toFixed(1)} — you're at peak performance.`,
+    ytd_tip_good_title: "Good performance",
+    ytd_tip_good: (avg) => `Good performance with room to improve. Your average is ${avg.toFixed(1)}/100.`,
+    ytd_tip_low_title: "Needs improvement",
+    ytd_tip_low: (avg) => `Your yearly average is ${avg.toFixed(1)} — focus on the weakest products.`,
+    ytd_tip_best_title: "Best month",
+    ytd_tip_best: (m, s) => `Your best month was ${m} with score ${s.toFixed(1)} — repeat that approach!`,
+    ytd_tip_worst_title: "Month to review",
+    ytd_tip_worst: (m, s) => `${m} was the weakest (${s.toFixed(1)}) — review what happened to avoid it.`,
 
     months_full: ["January","February","March","April","May","June","July","August","September","October","November","December"],
     months_short: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
