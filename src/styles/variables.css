@@ -1,0 +1,105 @@
+/* === Dark theme (default fallback if attribute missing) === */
+:root,
+:root[data-theme="dark"] {
+  --bg-base:      #060d1a;
+  --bg-surface:   rgba(255,255,255,0.04);
+  --bg-elevated:  rgba(255,255,255,0.07);
+  --bg-hover:     rgba(255,255,255,0.09);
+
+  --gold:         #D4A843;
+  --gold-light:   #f0c857;
+  --gold-glow:    rgba(212,168,67,0.15);
+  --gold-border:  rgba(212,168,67,0.22);
+
+  --success:      #34D399;
+  --success-bg:   rgba(52,211,153,0.09);
+  --success-bd:   rgba(52,211,153,0.25);
+
+  --warning:      #D4A843;
+  --warning-bg:   rgba(212,168,67,0.09);
+  --warning-bd:   rgba(212,168,67,0.25);
+
+  --danger:       #F87171;
+  --danger-bg:    rgba(248,113,113,0.09);
+  --danger-bd:    rgba(248,113,113,0.25);
+
+  --info:         #4F9CF9;
+  --info-bg:      rgba(79,156,249,0.09);
+  --info-bd:      rgba(79,156,249,0.25);
+
+  --text-primary:   #e8edf8;
+  --text-secondary: rgba(255,255,255,0.65);
+  --text-muted:     rgba(255,255,255,0.35);
+  --text-subtle:    rgba(255,255,255,0.18);
+
+  --border-subtle: rgba(255,255,255,0.08);
+  --border-accent: rgba(212,168,67,0.22);
+
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.35);
+  --shadow-glow: 0 0 24px var(--gold-glow);
+
+  --header-bg:    rgba(255,255,255,0.025);
+  --header-border:rgba(255,255,255,0.07);
+  --toast-text:   #060d1a;
+  --modal-text:   #060d1a;
+  --tooltip-bg:   #0d1829;
+  --ring-track:   rgba(255,255,255,0.07);
+  --progress-track: rgba(255,255,255,0.07);
+  --gradient-top: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212,168,67,0.12), transparent);
+  --gold-btn-text: #060d1a;
+
+  --r-sm:  8px;
+  --r-md:  12px;
+  --r-lg:  18px;
+  --r-xl:  24px;
+}
+
+/* === Light theme === */
+:root[data-theme="light"] {
+  --bg-base:      #f4f6fb;
+  --bg-surface:   #ffffff;
+  --bg-elevated:  #ffffff;
+  --bg-hover:     #f0f2f7;
+
+  --gold:         #b78a2a;
+  --gold-light:   #d4a843;
+  --gold-glow:    rgba(183,138,42,0.15);
+  --gold-border:  rgba(183,138,42,0.32);
+
+  --success:      #10b981;
+  --success-bg:   rgba(16,185,129,0.10);
+  --success-bd:   rgba(16,185,129,0.32);
+
+  --warning:      #b78a2a;
+  --warning-bg:   rgba(183,138,42,0.10);
+  --warning-bd:   rgba(183,138,42,0.32);
+
+  --danger:       #ef4444;
+  --danger-bg:    rgba(239,68,68,0.10);
+  --danger-bd:    rgba(239,68,68,0.32);
+
+  --info:         #2563eb;
+  --info-bg:      rgba(37,99,235,0.10);
+  --info-bd:      rgba(37,99,235,0.32);
+
+  --text-primary:   #16213e;
+  --text-secondary: rgba(22,33,62,0.78);
+  --text-muted:     rgba(22,33,62,0.50);
+  --text-subtle:    rgba(22,33,62,0.28);
+
+  --border-subtle: rgba(22,33,62,0.10);
+  --border-accent: rgba(183,138,42,0.32);
+
+  --shadow-card: 0 6px 18px rgba(22,33,62,0.08);
+  --shadow-glow: 0 0 18px rgba(183,138,42,0.15);
+
+  --header-bg:    rgba(255,255,255,0.92);
+  --header-border:rgba(22,33,62,0.08);
+  --toast-text:   #ffffff;
+  --modal-text:   #16213e;
+  --tooltip-bg:   #ffffff;
+  --ring-track:   rgba(22,33,62,0.08);
+  --progress-track: rgba(22,33,62,0.08);
+  --gradient-top: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(183,138,42,0.10), transparent);
+  --gold-btn-text: #ffffff;
+}
