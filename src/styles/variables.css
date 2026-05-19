@@ -35,7 +35,7 @@
   --border-subtle: rgba(255,255,255,0.08);
   --border-accent: rgba(212,168,67,0.22);
 
-  --shadow-card: 0 4px 24px rgba(0,0,0,0.35);
+  --shadow-card: none;
   --shadow-glow: 0 0 24px var(--gold-glow);
 
   --header-bg:    rgba(255,255,255,0.025);
@@ -58,8 +58,8 @@
 :root[data-theme="light"] {
   --bg-base:      #f4f6fb;
   --bg-surface:   #ffffff;
-  --bg-elevated:  #ffffff;
-  --bg-hover:     #f0f2f7;
+  --bg-elevated:  #eef1f7;
+  --bg-hover:     #e2e6f0;
 
   --gold:         #b78a2a;
   --gold-light:   #d4a843;
@@ -90,7 +90,7 @@
   --border-subtle: rgba(22,33,62,0.10);
   --border-accent: rgba(183,138,42,0.32);
 
-  --shadow-card: 0 6px 18px rgba(22,33,62,0.08);
+  --shadow-card: 0 4px 14px rgba(22,33,62,0.07);
   --shadow-glow: 0 0 18px rgba(183,138,42,0.15);
 
   --header-bg:    rgba(255,255,255,0.92);

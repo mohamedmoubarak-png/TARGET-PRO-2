@@ -18,7 +18,11 @@ export function RingChart({ pct, label, valueText }: Props) {
 
   return (
     <div className="ring-wrap">
-      <svg width={180} height={180} viewBox="0 0 180 180" className="ring-svg">
+      <svg
+        viewBox="0 0 180 180"
+        className="ring-svg"
+        preserveAspectRatio="xMidYMid meet"
+      >
         <circle cx={90} cy={90} r={R} fill="none" stroke="var(--ring-track)" strokeWidth={14} />
         <circle
           cx={90} cy={90} r={R}
@@ -26,6 +30,7 @@ export function RingChart({ pct, label, valueText }: Props) {
           strokeDasharray={C} strokeDashoffset={off}
           strokeLinecap="round"
           className="ring-circle"
+          transform="rotate(-90 90 90)"
         />
       </svg>
       <div className="ring-text">
